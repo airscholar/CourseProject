@@ -1,0 +1,31 @@
+services:
+  backend:
+    build: ./server
+    command: "node dist/server.js"
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: "production"
+      PORT: 4000
+      SITE_NAME: "CourseProject"
+      DEFAULT_DOMAIN: "localhost"
+      APP_PROTOCOL: "http"
+      APP_DOMAIN: "localhost"
+      LINK_LENGTH: "6"
+      SENTRY_PRIVATE_DSN: ""
+      SENTRY_PUBLIC_DSN: ""
+      LOG_JSON_STYLE: "true"
+      LOG_DATE_FORMAT: "YYYY-MM-DD HH:mm:ss"
+      LOG_INFO_MAX_SIZE: 5242880
+      LOG_INFO_MAX_FILES: 100
+      LOG_INFO_COLORIZE: "true"
+      LOG_ERROR_MAX_SIZE: 5242880
+      LOG_ERROR_MAX_FILES: 100
+      LOG_ERROR_COLORIZE: "true"
+  client:
+    build: ./client
+    # command: "http- client.js"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend

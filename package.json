@@ -1,0 +1,36 @@
+{
+  "name": "CourseProjectShortner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "build-server": "npm run --prefix server build",
+    "build-client": "npm run --prefix client build",
+    "start-server:prod": "npm run --prefix server start",
+    "start-server:dev": "npm run --prefix server dev",
+    "start-client:dev": "npm run --prefix client serve",
+    "prepare": "husky install",
+    "test": "npm run --prefix server test:unit",
+    "install:app": "npm run install-server && npm run install-client",
+    "build:app": "npm run build-server && npm run build-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airscholar/CourseProjectShortener.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airscholar/CourseProjectShortener/issues"
+  },
+  "homepage": "https://github.com/airscholar/CourseProjectShortener#readme",
+  "dependencies": {
+    "husky": "7.0.2"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0"
+  }
+}
