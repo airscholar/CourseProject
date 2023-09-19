@@ -116,4 +116,5 @@ npm run start-client:dev
 ```
 ## Run frontend app in dev mode
 Use the build file in the `dist` folder to run the frontend app in production mode
+
 - You can refer to the container deployment guide above for more information.
